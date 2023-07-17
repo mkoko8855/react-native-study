@@ -128,6 +128,9 @@ export default function App() {
   const addGoalHandler = (enteredGoalText) => {
     //useState로 관리하는 상태 변수의 setter 안에 콜백 함수를 작성하면,
     //그 콜백 함수의 매개값은 항상 해당 상태 변수의 최신 값이 전달됩니다.
+
+    //useState로 관리하는 상태 변수의 세터(메서드)안에 콜백 함수를 작성하면,
+    //그 콜백 함수의 매개값은 항상 해당 상태 변수의 최신 값이 전달된다.
     setTodoGoals((currentTodoGoals) => [
       ...currentTodoGoals,
       { text: enteredGoalText, id: Math.random().toString() },
